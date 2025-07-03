@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #c8c808, #97c412);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .game {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 15px;
+      display: flex;
+      gap: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .player {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .player h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .score {
+      font-size: 48px;
+      margin: 10px 0;
+      color: #2d3e0b;
+    }
+
+    .current-box {
+      background-color: #597b15;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button {
+      border: none;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dice {
+      width: 60px;
+      height: 60px;
+    }
+
+    .winner {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <div class="player" id="player--0">
+      <h2>PLAYER 1</h2>
+      <div class="score" id="score--0">0</div>
+      <div class="current-box">
+        <p>CURRENT</p>
+        <p id="current--0">0</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="btn--new">🔄 NEW GAME</button>
+      <img src="https://i.pinimg.com/736x/e4/b2/8a/e4b28a91c5e57cce63704f4104644ddc.jpg" alt="Dice" class="dice" id="dice" />
+      <button id="btn--roll">🎲 ROLL DICE</button>
+      <button id="btn--hold">📩 HOLD</button>
+    </div>
+    <div class="player" id="player--1">
+      <h2>PLAYER 2</h2>
+      <div class="score" id="score--1">0</div>
+      <div class="current-box">
+        <p>CURRENT</p>
+        <p id="current--1">0</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="dicee.js"></script>
+</body>
+</html>
